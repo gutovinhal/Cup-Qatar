@@ -1,0 +1,359 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #35875d;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #121214;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #121214;
+  border-radius: 20px;
+  border: 2px solid #850404;
+}
+
+/* --------------------------------- RELATIVE BODY'S --------------------------------- */
+
+/*:root{
+}
+
+body.blue {
+}
+
+body.green{
+}
+
+body.yellow {
+}*/
+
+/* --------------------------------- BODY'S --------------------------------- */
+
+body {
+  background-color: #121214;
+  background-image: url(./assets/background/abstract.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+}
+
+body * {
+  font-family: "Roboto", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* --------------------------------- APP --------------------------------- */
+
+#app {
+  width: fit-content;
+  margin: auto;
+  padding-top: 35px;
+}
+
+/* --------------------------------- HEADER --------------------------------- */
+
+header {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+/* --------------------------------- CARD'S --------------------------------- */
+
+#cards {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin: auto;
+}
+
+.card {
+  padding: 32px 23px;
+  background-image: linear-gradient(to bottom, transparent, #b40404);
+
+  border: 5px solid black;
+  border-radius: 10px;
+
+  width: fit-content;
+  height: fit-content;
+  margin-top: 60px;
+}
+
+.card h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  padding: 10px 10px;
+  border: 4px solid black;
+  border-radius: 10px;
+  font-weight: bolder;
+
+  width: fit-content;
+  margin-inline: auto;
+  margin-bottom: 35px;
+
+  color: #fafafa;
+}
+
+.card h2 span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fafafa;
+
+  font-size: 18px;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+.card ul {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: fit-content;
+  margin-top: 20px;
+}
+
+.card ul li {
+  display: flex;
+}
+
+.card ul div + li {
+  padding-top: 24px;
+  border-top: 2px solid black;
+}
+
+.card ul li strong {
+  display: flex;
+  font-weight: 900;
+  font-size: 36px;
+
+  color: #e1e1e6;
+}
+
+.stage {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.nome-times {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  color: #e1e1e6;
+  font-size: 7px;
+  text-transform: capitalize;
+}
+
+.card ul li strong.hour {
+  text-transform: uppercase;
+  font-size: 30px;
+  margin-bottom: 2px;
+}
+
+.card ul li strong.group {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.card h1,
+.card ul li strong,
+.card ul li img {
+  transition: transfrom 0.5s;
+}
+
+.card ul li strong:hover,
+.card ul li img:hover {
+  transform: rotateX(10deg);
+  transform: rotateY(10deg);
+  transform: rotateZ(10deg);
+}
+
+.card h1:hover,
+.card h2:hover,
+.card p:hover {
+  transform: scale(1.1);
+}
+
+@keyframes appear {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
+@media (min-width: 700px) {
+  #cards {
+    max-width: 1300px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+/* --------------------------------- MENU ------------------------------------- */
+
+.menu {
+  list-style: none;
+
+ 
+  font-size: 15px;
+  position: relative;
+}
+
+.menu li {
+  display: flex;
+  align-items: center;
+}
+
+.menu li a {
+  position: relative;
+  display: block;
+  padding: 20px 35px;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: black;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+.menu li a:hover {
+  background: transparent;
+  color: white;
+  box-shadow: 0 0 5px blue, 0 0 25px #b40404, 0 0 50px #b40404,
+    0 0 200px #b40404;
+}
+
+.menu li ul {
+  position: absolute;
+
+  top: 100%;
+  left: 0%;
+  background-color: transparent;
+  display: none;
+  justify-content: center;
+  padding: 70px 20px;
+}
+
+.menu li ul li {
+  border: 5px solid transparent;
+  width: 150px;
+}
+
+.menu li:hover ul {
+  display: block;
+}
+
+/* --------------------------------- MEU BOTÃO ------------------------------------- */
+
+a span {
+  position: absolute;
+  display: block;
+}
+
+a:nth-child(1) {
+  filter: hue-rotate(270deg);
+}
+
+a:nth-child(2) {
+  filter: hue-rotate(110deg);
+}
+
+a span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, red);
+  animation: animate1 1s linear infinite;
+}
+
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, red);
+  animation: animate2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+a span:nth-child(3) {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(270deg, transparent, red);
+  animation: animate3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+@keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, red);
+  animation: animate4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
