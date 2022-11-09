@@ -280,10 +280,12 @@ header {
   display: block;
 }
 
-@media (max-width: 100px) {
+@media (max-width: 800px) {
   .menu {
-    min-width: 50px;
-    flex-direction: row;
+    min-width: 400px;
+    display: flex;
+
+    padding: 1px 1px;
   }
 }
 
