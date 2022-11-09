@@ -221,7 +221,6 @@ header {
 
 /* --------------------------------- MENU ------------------------------------- */
 
-
 .menu {
   display: flex;
   list-style: none;
@@ -240,8 +239,7 @@ header {
 
 .menu li {
   display: flex;
-  align-items: center; 
-
+  align-items: center;
 }
 
 .menu li a {
@@ -252,7 +250,6 @@ header {
   color: white;
   text-decoration: none;
   text-transform: uppercase;
-  
 
   background: transparent;
   transition: 0.5s;
@@ -283,11 +280,10 @@ header {
   display: block;
 }
 
-@media (min-width: 200px) {
-  #menu {
-    max-width: 300px;
+@media (max-width: 100px) {
+  .menu {
+    min-width: 50px;
     flex-direction: row;
-    flex-wrap: wrap;
   }
 }
 
@@ -384,8 +380,7 @@ a span:nth-child(4) {
 
 /* --------------------------------- PLAYERS ------------------------------------- */
 
-
-.players{
+.players {
   margin-top: 60px;
   text-align: center;
   align-items: center;
@@ -398,11 +393,8 @@ a span:nth-child(4) {
   justify-content: space-between;
   margin-left: 50px;
   margin-bottom: 50px;
-  
 }
 
-
-
-.players:hover{
+.players:hover {
   transform: scale(1.1);
 }
