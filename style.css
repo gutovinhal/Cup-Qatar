@@ -284,8 +284,6 @@ header {
   .menu {
     min-width: 400px;
     display: flex;
-
-    padding: 1px 1px;
   }
 }
 
