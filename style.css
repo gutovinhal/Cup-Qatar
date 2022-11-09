@@ -384,13 +384,18 @@ a span:nth-child(4) {
   text-align: center;
   align-items: center;
   flex-direction: column;
+  height: fit-content;
 }
 
 .players img {
   border-radius: 500px;
   justify-content: space-between;
   margin-left: 50px;
+  margin-bottom: 50px;
+  
 }
+
+
 
 .players:hover{
   transform: scale(1.1);
